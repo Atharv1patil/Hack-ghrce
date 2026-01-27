@@ -1,17 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Hyperspeed from "@/components/Hyperspeed";
-import CountdownTimer from "@/components/CountdownTimer";
+import HeroOverlay from "@/components/HeroOverlay";
+import Coordinators from "@/components/Coordinators";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
+      {/* NAVBAR */}
       <Navbar />
 
       {/* HERO SECTION */}
-      <section
-        id="hero"
-        className="relative h-screen w-full overflow-hidden bg-black"
-      >
+      <section id="hero" className="relative h-screen w-full overflow-hidden bg-black">
         <Hyperspeed
           effectOptions={{
             distortion: "xyDistortion",
@@ -49,47 +49,31 @@ export default function Home() {
             },
           }}
         />
-
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center text-white">
-          <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center text-white">
-          <h1 className="text-6xl font-bold">Hack GHRCE</h1>
-          <CountdownTimer />
-</div>
-        </div>
+        {/* HERO OVERLAY */}
+        <HeroOverlay />
       </section>
 
       {/* ABOUT US */}
-      <section
-        id="about"
-        className="min-h-screen bg-white px-10 pt-24"
-      >
+      <section id="about" className="min-h-screen bg-white px-10 pt-24">
         <h2 className="text-4xl font-bold">About Us</h2>
         <p className="mt-4 max-w-2xl text-gray-700">
-          Hack GHRCE is a hackathon focused on innovation, creativity, and
-          real-world problem solving.
+          Hack GHRCE is a hackathon focused on innovation, creativity, and real-world problem solving.
         </p>
       </section>
 
       {/* PROBLEM STATEMENT */}
-      <section
-        id="problem"
-        className="min-h-screen bg-gray-100 px-10 pt-24"
-      >
+      <section id="problem" className="min-h-screen bg-gray-100 px-10 pt-24">
         <h2 className="text-4xl font-bold">Problem Statement</h2>
         <p className="mt-4 max-w-2xl text-gray-700">
-          Participants will tackle modern challenges using technology and
-          teamwork.
+          Participants will tackle modern challenges using technology and teamwork.
         </p>
       </section>
 
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="min-h-screen bg-black px-10 pt-24 text-white"
-      >
-        <h2 className="text-4xl font-bold">Contact Us</h2>
-        <p className="mt-4">Email: hackghrce@example.com</p>
-      </section>
+      {/* COORDINATORS SECTION */}
+      <Coordinators />
+
+      {/* FOOTER */}
+      <Footer />
     </>
   );
 }

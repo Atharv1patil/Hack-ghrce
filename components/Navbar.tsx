@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const navItems = [
   { label: "About Us", id: "about" },
   { label: "Problem Statement", id: "problem" },
-  { label: "Contact Us", id: "contact" },
+  { label: "Our Coordinators", id: "coordinators" },
 ];
 
 export default function Navbar() {
