@@ -1,12 +1,17 @@
-import Image from "next/image";
-import Hero from "@/components/hero";
+import Navbar from "@/components/Navbar";
 import Hyperspeed from "@/components/Hyperspeed";
+import CountdownTimer from "@/components/CountdownTimer";
+
 export default function Home() {
   return (
     <>
-    
-      <section className="relative h-screen w-full overflow-hidden bg-black">
-        
+      <Navbar />
+
+      {/* HERO SECTION */}
+      <section
+        id="hero"
+        className="relative h-screen w-full overflow-hidden bg-black"
+      >
         <Hyperspeed
           effectOptions={{
             distortion: "xyDistortion",
@@ -46,14 +51,45 @@ export default function Home() {
         />
 
         <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center text-white">
-          <h1 className="text-6xl font-bold">Hack ghrce</h1>
+          <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center text-white">
+          <h1 className="text-6xl font-bold">Hack GHRCE</h1>
+          <CountdownTimer />
+</div>
         </div>
       </section>
 
-      
-      {/* <section className="min-h-screen bg-white">
-        <p className="p-10">Next content…</p>
-      </section> */}
+      {/* ABOUT US */}
+      <section
+        id="about"
+        className="min-h-screen bg-white px-10 pt-24"
+      >
+        <h2 className="text-4xl font-bold">About Us</h2>
+        <p className="mt-4 max-w-2xl text-gray-700">
+          Hack GHRCE is a hackathon focused on innovation, creativity, and
+          real-world problem solving.
+        </p>
+      </section>
+
+      {/* PROBLEM STATEMENT */}
+      <section
+        id="problem"
+        className="min-h-screen bg-gray-100 px-10 pt-24"
+      >
+        <h2 className="text-4xl font-bold">Problem Statement</h2>
+        <p className="mt-4 max-w-2xl text-gray-700">
+          Participants will tackle modern challenges using technology and
+          teamwork.
+        </p>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="min-h-screen bg-black px-10 pt-24 text-white"
+      >
+        <h2 className="text-4xl font-bold">Contact Us</h2>
+        <p className="mt-4">Email: hackghrce@example.com</p>
+      </section>
     </>
   );
 }
